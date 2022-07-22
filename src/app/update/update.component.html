@@ -1,0 +1,14 @@
+<div class="main-block" >
+
+  <form action="/" [formGroup]="taskFrom" >
+    <h1>Updating Todo</h1>
+    <div class="info">
+      <input  class="task" formControlName="task" placeholder="Describe Task" type="text" value="{{taskFrom.task}}">
+      <input  class="task" formControlName="cr_time" placeholder="create time" type="text" value="{{taskFrom.cr_time}}">
+      <input  class="due_time" formControlName="due_time" placeholder="Due time" type="text" value="{{taskFrom.due_time}}">
+    </div>
+    <button mat-raised-button type="submit" (click)="updateTask()" > Update </button>
+  </form>
+
+
+</div>

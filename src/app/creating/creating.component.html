@@ -1,0 +1,14 @@
+<div class="main-block" >
+
+  <form action="/">
+    <h1>Creating New Todo</h1>
+    <div class="info">
+      <input [(ngModel)]="task.id" class="task" name="name" placeholder="id" type="number">
+      <input [(ngModel)]="task.task" class="task" name="name" placeholder="Describe Task" type="text">
+      <input [(ngModel)]="task.cr_time" class="task" name="name" placeholder="create time" type="text">
+      <input [(ngModel)]="task.due_time" class="due_time" name="name" placeholder="Due time" type="text">
+
+    </div>
+    <button mat-raised-button type="submit" (click)="createTask()" routerLink="/task">Submit</button>
+  </form>
+</div>

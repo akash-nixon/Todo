@@ -1,0 +1,35 @@
+<div class="container">
+<div class="container">
+  <div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+      <table class="table table-striped custab">
+        <thead >
+        <tr>
+          <th>Id</th>
+          <th>Task</th>
+          <th>Created Time</th>
+          <th>Due time</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let t of tasks">
+          <td class="data">{{t.id}}</td>
+          <td class="data">{{t.task}}</td>
+          <td class="data">{{t.cr_time}}</td>
+          <td class="data">{{t.due_time}}</td>
+          <td class="text-center">
+            <button mat-icon-button  >
+              <span><mat-icon (click)="deleteTaskById(t.id)" class="delete">delete</mat-icon></span>
+            </button>
+            <button mat-icon-button class="edit" (click)="openDialog(t)"> <span><mat-icon >edit</mat-icon></span></button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-update *ngIf="isUpdate" >
+    </app-update>
+  </div>
+</div>
+</div>
